@@ -1,5 +1,19 @@
 # point
-An easy to use, 2D/3D, GPU-accelerated engine based on SFML.
+point is an easy to use, 2D/3D, GPU-accelerated engine based on SFML.
+
+
+
+## Why C?
+
+I chose C because it is the language I'm most used to, and also because it is faster than other languages like C#, Java, etc.
+
+
+
+## How do I build a program with it?
+
+That's easy! You only need to install libcsfml-dev, copy the library to your proyect and run this command on your terminal:
+
+` $ gcc -lcsfml-graphics -lcsfml-window -lcsfml-system main.c -o main `
 
 
 
