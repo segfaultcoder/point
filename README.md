@@ -19,7 +19,7 @@ That's easy! You only need to install libcsfml-dev, copy the library to your pro
 
 ## Example
 
-This example makes a 1280x720 window with a 640x360 canvas, connects them and draws random white pixels on the canvas. To see more details about how to use it, see the [wiki](google.com).
+This example makes a 1280x720 window with a 640x360 canvas, connects them and draws random white pixels on the canvas. To see more details about how to use it, see the [wiki](https://example.com/).
 
 ```c
 #include "point.h"
