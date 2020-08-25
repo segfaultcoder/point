@@ -25,7 +25,7 @@ No! I've just started developing it, and there are only the essentials for runni
 
 ## Example
 
-This example makes a 1280x720 window with a 640x360 canvas, connects them and draws random white pixels on the canvas. To see more details about how to use it, see the [wiki](https://example.com/).
+This example makes a 1280x720 window with a 640x360 canvas, connects them and draws random white pixels on the canvas. To see more details about how to use it, see the [wiki](https://github.com/segfaultcoder/point/wiki).
 
 ```c
 #include "point.h"
