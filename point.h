@@ -18,6 +18,7 @@
  *  - (X) object.h
  *  - ( ) platform.h
  *  - (X) screen.h
+ *  - (-) font.h
  *  - (X) object/canvas.h
 */
 
@@ -40,6 +41,7 @@ typedef unsigned char bool;
 
 #include "point/color.h"
 #include "point/image.h"
+#include "point/font.h"
 
 #include "point/object/canvas.h"
 #include "point/object/button.h"
