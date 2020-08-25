@@ -17,18 +17,7 @@ void destroy_point_canvas(point_canvas canvas);
 
 void point_canvas_plot(point_canvas canvas, unsigned int x, unsigned int y, point_color c);
 
-void _point_canvas_render(point_object_args data) {
-  point_object this = data->this;
-  point_image image = this->data;
-  sfSprite *sprite = sfSprite_create();
-  sfVector2f pos = {this->x, this->y};
-  sfVector2f scale = {this->width / image->width, this->height / image->height};
-  sfSprite_setTexture(sprite, image->texture, true);
-  sfSprite_setPosition(sprite, pos);
-  sfSprite_setScale(sprite, scale);
-  sfRenderWindow_drawSprite(data->window, sprite, NULL);
-  sfSprite_destroy(sprite);
-}
+void _point_canvas_render(point_object_args data);
 
 // IMPLEMENTATION
 
@@ -46,7 +35,20 @@ void destroy_point_canvas(point_canvas canvas) {
 
 void point_canvas_plot(point_canvas canvas, unsigned int x, unsigned int y, point_color c) {
   point_image_plot(canvas->data, x, y, c);
-  point_image_update(canvas->data);
+}
+
+void _point_canvas_render(point_object_args data) {
+  point_object this = data->this;
+  point_image image = this->data;
+  point_image_update(image);
+  sfSprite *sprite = sfSprite_create();
+  sfVector2f pos = {this->x, this->y};
+  sfVector2f scale = {this->width / image->width, this->height / image->height};
+  sfSprite_setTexture(sprite, image->texture, true);
+  sfSprite_setPosition(sprite, pos);
+  sfSprite_setScale(sprite, scale);
+  sfRenderWindow_drawSprite(data->window, sprite, NULL);
+  sfSprite_destroy(sprite);
 }
 
 #endif

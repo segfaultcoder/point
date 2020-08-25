@@ -13,7 +13,11 @@ int main(void) {
   point_screen_start(screen);
   srand(time(0));
   while (point_screen_running(screen)) {
-    point_canvas_plot(canvas, rand() % 640, rand() % 360, point_color_rgb(255, 255, 255));
+    for (int i = 0; i < 640; i++) {
+      for (int j = 0; j < 360; j++) {
+        point_canvas_plot(canvas, i, j, point_color_rgb(rand() % 255, rand() % 255, rand() % 255));
+      }
+    }
     point_screen_render(screen);
   }
   point_screen_deattach(screen, canvas);
