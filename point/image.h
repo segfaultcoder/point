@@ -63,7 +63,9 @@ point_image point_image_load(char *path) {
   image->texture = texture;
   sfTexture_setRepeated(image->texture, false);
   sfTexture_setSmooth(image->texture, false);
-  point_image_update(image);
+  sfImage *tmp = sfTexture_copyToImage(image->texture);
+  memcpy(image->pixels, sfImage_getPixelsPtr(tmp), image->width * image->height * 4);
+  sfImage_destroy(tmp);
   return image;
 }
 

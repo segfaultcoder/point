@@ -28,10 +28,11 @@ typedef unsigned char bool;
 
 #include "point/platform.h"
 
+#include "point/color.h"
+
 #include "point/object.h"
 #include "point/screen.h"
 
-#include "point/color.h"
 #include "point/image.h"
 #include "point/font.h"
 

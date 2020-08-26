@@ -106,6 +106,7 @@ void _point_label_render(void *dataptr) {
     unsigned int texy = ((unsigned int)(data->text[i]) / data->font->charsperrow) * data->font->charheight;
     sfIntRect subsprite = {texx, texy, data->font->charwidth, data->font->charheight};
     sfSprite_setTextureRect(sprite, subsprite);
+    sfSprite_setColor(sprite, sfColor_fromInteger(this->tint));
     sfRenderWindow_drawSprite(args->window, sprite, NULL);
     sfSprite_destroy(sprite);
   }

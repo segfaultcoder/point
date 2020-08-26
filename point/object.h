@@ -10,6 +10,7 @@
 
 typedef struct point_object {
   unsigned int x, y, width, height, maskx, masky, maskwidth, maskheight, count, id;
+  point_color tint;
   struct point_object *next;
   void *data;
   void (*render)(void *);
@@ -39,6 +40,7 @@ point_object new_point_object(unsigned int x, unsigned int y, unsigned int width
   object->maskheight = height;
   object->count = 0;
   object->id = -1;
+  object->tint = point_color_white;
   object->next = NULL;
   object->data = NULL;
   object->render = NULL;

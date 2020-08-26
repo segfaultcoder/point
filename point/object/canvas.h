@@ -48,6 +48,7 @@ void _point_canvas_render(void *dataptr) {
   sfSprite_setTexture(sprite, image->texture, true);
   sfSprite_setPosition(sprite, pos);
   sfSprite_setScale(sprite, scale);
+  sfSprite_setColor(sprite, sfColor_fromInteger(this->tint));
   sfRenderWindow_drawSprite(data->window, sprite, NULL);
   sfSprite_destroy(sprite);
 }
