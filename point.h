@@ -2,7 +2,7 @@
  * point engine: An easy to use, 2D/3D, GPU-accelerated engine based on SFML.
  * Made by segfaultcoder.
  * 
- * Last updated on: 08/25/2020
+ * Last updated on: 08/26/2020
  * 
  * List of platforms(X if implemented, - if in progress):
  *  - ( ) Windows
@@ -11,15 +11,6 @@
  *  - ( ) Android
  *  - ( ) Nintendo Switch
  *  - ( ) PS Vita
- * 
- * List of files(X if done, - if in progress):
- *  - (X) color.h
- *  - (X) image.h
- *  - (X) object.h
- *  - ( ) platform.h
- *  - (X) screen.h
- *  - (-) font.h
- *  - (X) object/canvas.h
 */
 
 #ifndef __POINT

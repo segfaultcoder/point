@@ -10,16 +10,29 @@
 
 typedef struct point_font {
   unsigned int charwidth, charheight, charsperrow;
+  bool fullascii;
   point_image image;
 } * point_font;
 
 // DECLARATION
 
-point_font new_point_font(point_image image, unsigned int charwidth, unsigned int charheight, unsigned int charsperrow);
+point_font new_point_font(point_image image, unsigned int charwidth, unsigned int charheight, unsigned int charsperrow, bool fullascii);
 void destroy_point_font(point_font font);
 
 // IMPLEMENTATION
 
-// TODO
+point_font new_point_font(point_image image, unsigned int charwidth, unsigned int charheight, unsigned int charsperrow, bool fullascii) {
+  point_font font = malloc(sizeof(struct point_font));
+  font->image = image;
+  font->charwidth = charwidth;
+  font->charheight = charheight;
+  font->charsperrow = charsperrow;
+  font->fullascii = fullascii;
+  return font;
+}
+
+void destroy_point_font(point_font font) {
+  free(font);
+}
 
 #endif

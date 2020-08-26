@@ -20,11 +20,10 @@ typedef struct point_image {
 point_image new_point_image(unsigned int width, unsigned int height);
 void destroy_point_image(point_image image);
 
-// point_image point_image_load_png(char *path);
-// point_image point_image_load_jpeg(char *path);
-
 void point_image_update(point_image image);
 void point_image_plot(point_image image, unsigned int x, unsigned int y, point_color c);
+
+point_image point_image_load(char *path);
 
 // IMPLEMENTATION
 
@@ -53,6 +52,19 @@ void point_image_plot(point_image image, unsigned int x, unsigned int y, point_c
   image->pixels[1 + 4 * (x + (y * image->width))] = (unsigned char)(c >> 16);
   image->pixels[2 + 4 * (x + (y * image->width))] = (unsigned char)(c >> 8);
   image->pixels[3 + 4 * (x + (y * image->width))] = (unsigned char)(c >> 0);
+}
+
+point_image point_image_load(char *path) {
+  sfTexture *texture = sfTexture_createFromFile(path, NULL);
+  point_image image = malloc(sizeof(struct point_image));
+  image->width = sfTexture_getSize(texture).x;
+  image->height = sfTexture_getSize(texture).y;
+  image->pixels = malloc(image->width * image->height * 4);
+  image->texture = texture;
+  sfTexture_setRepeated(image->texture, false);
+  sfTexture_setSmooth(image->texture, false);
+  point_image_update(image);
+  return image;
 }
 
 #endif
