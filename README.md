@@ -1,5 +1,5 @@
 # point
-point is an easy to use, 2D/3D, GPU-accelerated engine based on SFML.
+point is an easy to use, 2D/3D, GPU-accelerated engine based on CSFML. It is made completely on C99, and it doesn't need any other library apart from CSFML. It currently works in Windows, MacOS X and Linux. In the future, I want to port this to more platforms, like Android, iOS, Nintendo Switch and PS Vita.
 
 
 
@@ -19,7 +19,7 @@ That's easy! You only need to install libcsfml-dev, copy the library to your pro
 
 ## Is it finished?
 
-No! I've just started developing it, and there are only the essentials for running the example below(and the one included in the source code).
+No! I've just started developing it, and there are only the essentials for running the example below(and the ones included in the examples folder).
 
 
 
