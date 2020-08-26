@@ -3,26 +3,6 @@ point is an easy to use, 2D/3D, GPU-accelerated engine based on CSFML. It is mad
 
 
 
-## Why C?
-
-I chose C because it is the language I'm most used to, and also because it is faster than other languages like C#, Java, etc.
-
-
-
-## How do I build a program with it?
-
-That's easy! You only need to install libcsfml-dev, copy the library to your proyect and run this command on your terminal:
-
-` $ gcc -lcsfml-graphics -lcsfml-window -lcsfml-system main.c -o main `
-
-
-
-## Is it finished?
-
-No! I've just started developing it, and there are only the essentials for running the example below(and the ones included in the examples folder).
-
-
-
 ## Example
 
 This example makes a 1280x720 window with a 640x360 canvas, connects them and draws random white pixels on the canvas. To see more details about how to use it, see the [wiki](https://github.com/segfaultcoder/point/wiki).
@@ -53,3 +33,40 @@ int main(void) {
 }
 ```
 
+
+
+## Why C?
+
+I chose C because it is the language I'm most used to, and also because it is faster than other languages like C#, Java, etc.
+
+
+
+## I don't want to use C. / Your code is pretty bad. / etc.
+
+Then, you may be interested in other alternatives like:
+
+- [raylib-cpp](https://github.com/RobLoach/raylib-cpp)
+- [olc::PixelGameEngine](https://github.com/OneLoneCoder/olcPixelGameEngine)
+- [libgdx](https://github.com/libgdx/libgdx)
+
+See more alternatives [here](https://en.wikipedia.org/wiki/List_of_game_engines).
+
+
+
+## How do I build a program with it?
+
+That's easy! You only need to install libcsfml-dev, copy the library to your proyect and run this command on your terminal:
+
+` $ gcc -lcsfml-graphics -lcsfml-window -lcsfml-system main.c -o main `
+
+
+
+## Is it finished?
+
+No! I've just started developing it, and there are only the essentials for running the example above(and the ones included in the examples folder).
+
+
+
+## Are there any game made with it?
+
+No, but I'm planning on porting [evergreen](https://github.com/segfaultcoder/justsquares) to it.
