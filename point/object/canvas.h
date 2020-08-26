@@ -2,7 +2,7 @@
  * point engine: An easy to use, 2D/3D, GPU-accelerated engine based on SFML.
  * Made by segfaultcoder.
  * 
- * point/canvas.h
+ * point/object/canvas.h
 */
 
 #ifndef __POINT_CANVAS
@@ -17,7 +17,7 @@ void destroy_point_canvas(point_canvas canvas);
 
 void point_canvas_plot(point_canvas canvas, unsigned int x, unsigned int y, point_color c);
 
-void _point_canvas_render(point_object_args data);
+void _point_canvas_render(void *dataptr);
 
 // IMPLEMENTATION
 
@@ -37,7 +37,8 @@ void point_canvas_plot(point_canvas canvas, unsigned int x, unsigned int y, poin
   point_image_plot(canvas->data, x, y, c);
 }
 
-void _point_canvas_render(point_object_args data) {
+void _point_canvas_render(void *dataptr) {
+  point_object_args data = dataptr;
   point_object this = data->this;
   point_image image = this->data;
   point_image_update(image);

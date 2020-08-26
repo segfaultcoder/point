@@ -8,17 +8,17 @@
 #ifndef __POINT_OBJECT
 #define __POINT_OBJECT
 
-typedef struct point_object_args {
-  void *this;
-  void *window;
-} * point_object_args;
-
 typedef struct point_object {
   unsigned int x, y, width, height, maskx, masky, maskwidth, maskheight, count, id;
   struct point_object *next;
   void *data;
-  void (*render)(point_object_args);
+  void (*render)(void *);
 } * point_object;
+
+typedef struct point_object_args {
+  point_object this;
+  sfRenderWindow *window;
+} * point_object_args;
 
 // DECLARATION
 

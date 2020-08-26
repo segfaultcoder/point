@@ -17,6 +17,7 @@
 #define __POINT
 
 #include <stdlib.h>
+#include <string.h>
 
 #include <SFML/Graphics.h>
 #include <SFML/Audio.h>
